@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pantaudagingkurban">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_kambing_hijau"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_kambing_hijau_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ScanQRCodeActivity"
+            android:theme="@style/AppTheme.Fullscrean"></activity>
+        <activity
+            android:name=".SplasActivity"
+            android:theme="@style/AppTheme.Fullscrean">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TempatActivity"
+            android:label="Tempat Qurban"
+            android:parentActivityName=".DashboardActivity" />
+        <activity
+            android:name=".KarcisActivity"
+            android:label="List Karcis"
+            android:theme="@style/AppTheme.Fullscrean"
+            android:parentActivityName=".DashboardActivity" />
+        <activity
+            android:name=".DashboardActivity"
+            android:theme="@style/AppTheme.Fullscrean" />
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.Fullscrean" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.Fullscrean"></activity>
+        <activity
+            android:name=".FormKarcisActivity"
+            android:label="Buat Karcis"
+            android:parentActivityName=".TempatActivity" />
+    </application>
+
+</manifest>

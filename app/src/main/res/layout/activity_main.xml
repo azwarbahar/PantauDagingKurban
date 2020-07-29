@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormKarcisActivity">
+
+    <RelativeLayout
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/namalengkap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Penanggung jawab"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="@color/hujau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/tempat"
+            android:layout_below="@id/namalengkap"
+            android:layout_height="wrap_content"
+            android:hint="Nama Tempat"
+            app:helperText="Contoh : Masjid Nurul Ismi / Rumah Hj. Aisyah"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_account_balance"
+            app:startIconTint="@color/hujau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_tempat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Hp"
+            android:id="@+id/telpon"
+            android:layout_below="@id/tempat"
+            app:startIconDrawable="@drawable/ic_call_black_24dp"
+            app:startIconTint="@color/hujau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_telpon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal"
+            android:id="@+id/tgl"
+            android:layout_below="@id/telpon"
+            app:startIconDrawable="@drawable/ic_date_range_black_24dp"
+            app:startIconTint="@color/hujau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_waktu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:id="@+id/alamat"
+            android:layout_below="@id/tgl"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_place_black_24dp"
+            app:startIconTint="@color/hujau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pukul"
+            android:id="@+id/jam"
+            android:layout_below="@id/alamat"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_access_alarm_black_24dp"
+            app:startIconTint="@color/hujau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_jam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/ll_jumlah"
+            android:layout_marginBottom="150dp"
+            android:layout_below="@id/jam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_kurang"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@color/hujau"
+                android:text="-"
+                android:textColor="@color/putih"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:hint="Jumlah Karcis"
+                app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_jumlah"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_tambah"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@color/hujau"
+                android:text="+"
+                android:textColor="@color/putih"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:text="Buat Karcis"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/putih"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
